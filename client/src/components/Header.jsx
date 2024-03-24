@@ -30,7 +30,7 @@ export default function Header() {
 <button className='w-12 h-10 hidden sm:inline' color='gray'>
     <FaMoon/>
 </button>
-<Link to='/sign-in'>
+<Link to='/SignIn'>
             <Button gradientDuoTone='purpleToBlue' outline>
               Sign In
             </Button>

@@ -7,7 +7,9 @@ export default function SignUp() {
     const handleChange= (e) => {
     setFormData({...formData,[e.target.id]:e.target.value});
     }; 
-    console.log(formData);
+ const handleSubmit = async (e)=>{ 
+    e.preventDefault(); 
+ }
   return (
     <div className='min-h-screen mt-20'>
 
@@ -29,7 +31,7 @@ export default function SignUp() {
 
 {/*Right side */}
 <div>
-<form className='flex flex-col gap-4'> 
+<form className='flex flex-col gap-4' onSubmit={handleSubmit}> 
     <div className="">
         <Label value='Your username'/>
         <TextInput 

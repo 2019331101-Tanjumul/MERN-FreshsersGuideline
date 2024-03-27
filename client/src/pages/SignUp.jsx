@@ -2,6 +2,9 @@ import { Button, Label, TextInput } from 'flowbite-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function SignUp() {
+    const handleChange= (e) => {
+    console.log(e.target.value);
+    }
   return (
     <div className='min-h-screen mt-20'>
 
@@ -13,13 +16,12 @@ export default function SignUp() {
       Guideline
       </Link>
 <div className=''> {/*flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center*/}
-      <p className='text-sm mt-5'>
+      <p className='flex gap-2 text-sm mt-5'>
             This is a demo project. You can sign up with your email and password
             or with Google.
           </p>
           </div>
-
-<div>
+          <div>
 </div>
 
 {/*Right side */}
@@ -31,6 +33,7 @@ export default function SignUp() {
         type='text'
         placeholder='Usename with digits ex: robin22'
         id='Username'
+        onChange={handleChange}
         />
     </div>
     <div className="">
@@ -39,7 +42,8 @@ export default function SignUp() {
         type='email'
         placeholder='email@example.com'
         id='email'
-        />
+        required
+        onChange={handleChange}/>
     </div>
     <div className="">
         <Label value='Your Password'/>
@@ -47,7 +51,8 @@ export default function SignUp() {
         type='password'
         placeholder='16 alpha numeric charecters'
         id='password'
-        />
+        onChange={handleChange}
+         />
     </div>
     <Button gradientDuoTone= 'purpleToPink' type='submit'>
 

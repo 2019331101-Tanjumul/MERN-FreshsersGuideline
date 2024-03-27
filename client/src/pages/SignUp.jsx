@@ -1,10 +1,13 @@
-import { Button, Label, TextInput } from 'flowbite-react'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Button, Label, TextInput } from 'flowbite-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 export default function SignUp() {
+    const [formData, setFormData]= useState({}); 
+
     const handleChange= (e) => {
-    console.log(e.target.value);
-    }
+    setFormData({...formData,[e.target.id]:e.target.value});
+    }; 
+    console.log(formData);
   return (
     <div className='min-h-screen mt-20'>
 

@@ -36,7 +36,7 @@ export default function SignUp() {
     <div className="">
         <Label value='Your email'/>
         <TextInput 
-        type='text'
+        type='email'
         placeholder='email@example.com'
         id='email'
         />
@@ -44,7 +44,7 @@ export default function SignUp() {
     <div className="">
         <Label value='Your Password'/>
         <TextInput 
-        type='text'
+        type='password'
         placeholder='16 alpha numeric charecters'
         id='password'
         />
